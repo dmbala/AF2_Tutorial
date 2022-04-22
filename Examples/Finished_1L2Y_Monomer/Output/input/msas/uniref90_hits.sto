@@ -1,0 +1,9 @@
+# STOCKHOLM 1.0
+
+#=GS 1L2Y_1|Chain                DE A|TC5b|null
+#=GS UniRef90_A0A2V2SJX8/856-869 DE [subseq from] Uncharacterized protein (Fragment) n=1 Tax=Verrucomicrobia bacterium TaxID=2026799 RepID=A0A2V2SJX8_9BACT
+
+1L2Y_1|Chain                        NLYIQWLKDGGPSSGRPPPS
+UniRef90_A0A2V2SJX8/856-869         ---YQWVKDGSPLSGKT---
+#=GC RF                             xxxxxxxxxxxxxxxxxxxx
+//

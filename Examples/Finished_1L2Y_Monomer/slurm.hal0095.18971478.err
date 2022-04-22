@@ -1,0 +1,122 @@
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) openmpi/2.1.1
+
+I0421 22:02:13.028823 140572398896960 templates.py:857] Using precomputed obsolete pdbs /projects/community/alphafold/dbs/pdb_mmcif/obsolete.dat.
+I0421 22:02:13.653332 140572398896960 tpu_client.py:50] Starting the local TPU driver.
+I0421 22:02:13.654603 140572398896960 xla_bridge.py:212] Unable to initialize backend 'tpu_driver': NOT_FOUND: Unable to find driver in registry given worker: local://
+I0421 22:02:13.654976 140572398896960 xla_bridge.py:212] Unable to initialize backend 'gpu': NOT_FOUND: Could not find registered platform with name: "cuda". Available platform names are: Interpreter Host
+I0421 22:02:13.655228 140572398896960 xla_bridge.py:212] Unable to initialize backend 'tpu': INVALID_ARGUMENT: TpuPlatform is not available.
+W0421 22:02:13.655345 140572398896960 xla_bridge.py:215] No GPU/TPU found, falling back to CPU. (Set TF_CPP_MIN_LOG_LEVEL=0 and rerun for more info.)
+I0421 22:02:18.746384 140572398896960 run_alphafold.py:377] Have 5 models: ['model_1_ptm_pred_0', 'model_2_ptm_pred_0', 'model_3_ptm_pred_0', 'model_4_ptm_pred_0', 'model_5_ptm_pred_0']
+I0421 22:02:18.746655 140572398896960 run_alphafold.py:393] Using random seed 1458645196336569805 for the data pipeline
+I0421 22:02:18.746886 140572398896960 run_alphafold.py:161] Predicting input
+I0421 22:02:18.752969 140572398896960 jackhmmer.py:133] Launching subprocess "/projects/community/ai-fold/2021/bd387/envs/af2.2/bin//jackhmmer -o /dev/null -A /tmp/tmpdw2bf59a/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --incE 0.0001 -E 0.0001 --cpu 8 -N 1 /scratch/bd387/Work/AIF/AF2.2/Repo_test/Examples/1L2Y_Monomer/CPU/input.fa /projects/community/alphafold/dbs/uniref90/uniref90.fasta"
+I0421 22:02:18.798837 140572398896960 utils.py:36] Started Jackhmmer (uniref90.fasta) query
+I0421 22:06:37.524501 140572398896960 utils.py:40] Finished Jackhmmer (uniref90.fasta) query in 258.725 seconds
+I0421 22:06:37.529475 140572398896960 jackhmmer.py:133] Launching subprocess "/projects/community/ai-fold/2021/bd387/envs/af2.2/bin//jackhmmer -o /dev/null -A /tmp/tmp9ydze1im/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --incE 0.0001 -E 0.0001 --cpu 8 -N 1 /scratch/bd387/Work/AIF/AF2.2/Repo_test/Examples/1L2Y_Monomer/CPU/input.fa /projects/community/alphafold/dbs/mgnify/mgy_clusters_2018_12.fa"
+I0421 22:06:37.580124 140572398896960 utils.py:36] Started Jackhmmer (mgy_clusters_2018_12.fa) query
+I0421 22:11:30.417469 140572398896960 utils.py:40] Finished Jackhmmer (mgy_clusters_2018_12.fa) query in 292.837 seconds
+I0421 22:11:30.422069 140572398896960 hhsearch.py:85] Launching subprocess "/projects/community/ai-fold/2021/bd387/envs/af2.2/bin//hhsearch -i /tmp/tmpk8tyjb9a/query.a3m -o /tmp/tmpk8tyjb9a/output.hhr -maxseq 1000000 -d /projects/community/alphafold/dbs/pdb70/pdb70"
+I0421 22:11:30.474266 140572398896960 utils.py:36] Started HHsearch query
+I0421 22:12:03.035093 140572398896960 utils.py:40] Finished HHsearch query in 32.560 seconds
+I0421 22:12:03.060161 140572398896960 hhblits.py:128] Launching subprocess "/projects/community/ai-fold/2021/bd387/envs/af2.2/bin//hhblits -i /scratch/bd387/Work/AIF/AF2.2/Repo_test/Examples/1L2Y_Monomer/CPU/input.fa -cpu 4 -oa3m /tmp/tmppt2txqpa/output.a3m -o /dev/null -n 3 -e 0.001 -maxseq 1000000 -realign_max 100000 -maxfilt 100000 -min_prefilter_hits 1000 -d /projects/community/alphafold/dbs/bfd/bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt -d /projects/community/alphafold/dbs/uniclust30/uniclust30_2018_08/uniclust30_2018_08"
+I0421 22:12:03.105342 140572398896960 utils.py:36] Started HHblits query
+I0421 22:24:37.405164 140572398896960 utils.py:40] Finished HHblits query in 754.299 seconds
+I0421 22:24:37.411444 140572398896960 templates.py:878] Searching for template for: NLYIQWLKDGGPSSGRPPPS
+I0421 22:24:37.606444 140572398896960 templates.py:286] Found a fuzzy sequence-only match 6gb1_B.
+I0421 22:24:37.915438 140572398896960 templates.py:286] Found a fuzzy sequence-only match 6ge2_A.
+I0421 22:24:38.178387 140572398896960 templates.py:286] Found a fuzzy sequence-only match 6gdz_A.
+I0421 22:24:38.247881 140572398896960 templates.py:268] Found an exact template match 5ott_B.
+I0421 22:24:38.298825 140572398896960 templates.py:268] Found an exact template match 1ox3_A.
+I0421 22:24:38.386718 140572398896960 templates.py:268] Found an exact template match 2ibl_A.
+I0421 22:24:38.585312 140572398896960 templates.py:268] Found an exact template match 2bsg_C.
+I0421 22:24:38.661394 140572398896960 templates.py:268] Found an exact template match 3c5t_B.
+I0421 22:24:39.032566 140572398896960 templates.py:268] Found an exact template match 3uze_C.
+I0421 22:24:39.298851 140572398896960 templates.py:268] Found an exact template match 6mp0_A.
+I0421 22:24:40.438720 140572398896960 templates.py:268] Found an exact template match 2h0p_A.
+I0421 22:24:41.895531 140572398896960 templates.py:268] Found an exact template match 2jv6_A.
+I0421 22:24:42.030800 140572398896960 templates.py:268] Found an exact template match 3vtt_B.
+I0421 22:24:42.705556 140572398896960 templates.py:268] Found an exact template match 2rcj_G.
+I0421 22:24:42.971331 140572398896960 templates.py:268] Found an exact template match 4ono_A.
+I0421 22:24:43.210911 140572398896960 templates.py:268] Found an exact template match 6j5d_A.
+I0421 22:24:44.421902 140572398896960 templates.py:268] Found an exact template match 3it8_E.
+I0421 22:24:44.535073 140572398896960 templates.py:268] Found an exact template match 1zvo_C.
+I0421 22:24:44.775225 140572398896960 templates.py:268] Found an exact template match 1mco_H.
+I0421 22:24:45.094151 140572398896960 templates.py:268] Found an exact template match 6grq_A.
+I0421 22:24:45.117259 140572398896960 pipeline.py:234] Uniref90 MSA size: 2 sequences.
+I0421 22:24:45.117350 140572398896960 pipeline.py:235] BFD MSA size: 5 sequences.
+I0421 22:24:45.117415 140572398896960 pipeline.py:236] MGnify MSA size: 2 sequences.
+I0421 22:24:45.117470 140572398896960 pipeline.py:238] Final (deduplicated) MSA size: 7 sequences.
+I0421 22:24:45.117715 140572398896960 pipeline.py:241] Total number of templates (NB: this can include bad templates and is later filtered to top 4): 20.
+I0421 22:24:45.121106 140572398896960 run_alphafold.py:190] Running model model_1_ptm_pred_0 on input
+I0421 22:24:49.439223 140572398896960 model.py:166] Running predict with shape(feat) = {'aatype': (4, 20), 'residue_index': (4, 20), 'seq_length': (4,), 'template_aatype': (4, 4, 20), 'template_all_atom_masks': (4, 4, 20, 37), 'template_all_atom_positions': (4, 4, 20, 37, 3), 'template_sum_probs': (4, 4, 1), 'is_distillation': (4,), 'seq_mask': (4, 20), 'msa_mask': (4, 508, 20), 'msa_row_mask': (4, 508), 'random_crop_to_size_seed': (4, 2), 'template_mask': (4, 4), 'template_pseudo_beta': (4, 4, 20, 3), 'template_pseudo_beta_mask': (4, 4, 20), 'atom14_atom_exists': (4, 20, 14), 'residx_atom14_to_atom37': (4, 20, 14), 'residx_atom37_to_atom14': (4, 20, 37), 'atom37_atom_exists': (4, 20, 37), 'extra_msa': (4, 5120, 20), 'extra_msa_mask': (4, 5120, 20), 'extra_msa_row_mask': (4, 5120), 'bert_mask': (4, 508, 20), 'true_msa': (4, 508, 20), 'extra_has_deletion': (4, 5120, 20), 'extra_deletion_value': (4, 5120, 20), 'msa_feat': (4, 508, 20, 49), 'target_feat': (4, 20, 22)}
+2022-04-21 22:28:21.954473: E external/org_tensorflow/tensorflow/compiler/xla/service/slow_operation_alarm.cc:61] 
+********************************
+Very slow compile?  If you want to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+Compiling module jit_apply_fn.134739
+********************************
+I0421 22:32:23.660285 140572398896960 model.py:176] Output shape was {'distogram': {'bin_edges': (63,), 'logits': (20, 20, 64)}, 'experimentally_resolved': {'logits': (20, 37)}, 'masked_msa': {'logits': (508, 20, 23)}, 'predicted_aligned_error': (20, 20), 'predicted_lddt': {'logits': (20, 50)}, 'structure_module': {'final_atom_mask': (20, 37), 'final_atom_positions': (20, 37, 3)}, 'plddt': (20,), 'aligned_confidence_probs': (20, 20, 64), 'max_predicted_aligned_error': (), 'ptm': (), 'ranking_confidence': ()}
+I0421 22:32:23.660701 140572398896960 run_alphafold.py:204] Total JAX model model_1_ptm_pred_0 on input predict time (includes compilation time, see --benchmark): 454.2s
+I0421 22:32:24.568753 140572398896960 amber_minimize.py:177] alterations info: {'nonstandard_residues': [], 'removed_heterogens': set(), 'missing_residues': {}, 'missing_heavy_atoms': {}, 'missing_terminals': {<Residue 19 (SER) of chain 0>: ['OXT']}, 'Se_in_MET': [], 'removed_chains': {0: []}}
+I0421 22:32:24.600144 140572398896960 amber_minimize.py:408] Minimizing protein, attempt 1 of 100.
+I0421 22:32:25.009295 140572398896960 amber_minimize.py:69] Restraining 154 / 304 particles.
+I0421 22:32:25.793003 140572398896960 amber_minimize.py:177] alterations info: {'nonstandard_residues': [], 'removed_heterogens': set(), 'missing_residues': {}, 'missing_heavy_atoms': {}, 'missing_terminals': {}, 'Se_in_MET': [], 'removed_chains': {0: []}}
+I0421 22:32:27.216949 140572398896960 amber_minimize.py:500] Iteration completed: Einit 960.92 Efinal -295.88 Time 0.98 s num residue violations 0 num residue exclusions 0 
+I0421 22:32:27.478631 140572398896960 amber_minimize.py:177] alterations info: {'nonstandard_residues': [], 'removed_heterogens': set(), 'missing_residues': {}, 'missing_heavy_atoms': {}, 'missing_terminals': {<Residue 19 (SER) of chain 0>: ['OXT']}, 'Se_in_MET': [], 'removed_chains': {0: []}}
+I0421 22:32:27.541453 140572398896960 run_alphafold.py:190] Running model model_2_ptm_pred_0 on input
+I0421 22:32:29.177606 140572398896960 model.py:166] Running predict with shape(feat) = {'aatype': (4, 20), 'residue_index': (4, 20), 'seq_length': (4,), 'template_aatype': (4, 4, 20), 'template_all_atom_masks': (4, 4, 20, 37), 'template_all_atom_positions': (4, 4, 20, 37, 3), 'template_sum_probs': (4, 4, 1), 'is_distillation': (4,), 'seq_mask': (4, 20), 'msa_mask': (4, 508, 20), 'msa_row_mask': (4, 508), 'random_crop_to_size_seed': (4, 2), 'template_mask': (4, 4), 'template_pseudo_beta': (4, 4, 20, 3), 'template_pseudo_beta_mask': (4, 4, 20), 'atom14_atom_exists': (4, 20, 14), 'residx_atom14_to_atom37': (4, 20, 14), 'residx_atom37_to_atom14': (4, 20, 37), 'atom37_atom_exists': (4, 20, 37), 'extra_msa': (4, 1024, 20), 'extra_msa_mask': (4, 1024, 20), 'extra_msa_row_mask': (4, 1024), 'bert_mask': (4, 508, 20), 'true_msa': (4, 508, 20), 'extra_has_deletion': (4, 1024, 20), 'extra_deletion_value': (4, 1024, 20), 'msa_feat': (4, 508, 20, 49), 'target_feat': (4, 20, 22)}
+2022-04-21 22:35:59.878378: E external/org_tensorflow/tensorflow/compiler/xla/service/slow_operation_alarm.cc:61] 
+********************************
+Very slow compile?  If you want to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+Compiling module jit_apply_fn__1.134739
+********************************
+I0421 22:38:53.381123 140572398896960 model.py:176] Output shape was {'distogram': {'bin_edges': (63,), 'logits': (20, 20, 64)}, 'experimentally_resolved': {'logits': (20, 37)}, 'masked_msa': {'logits': (508, 20, 23)}, 'predicted_aligned_error': (20, 20), 'predicted_lddt': {'logits': (20, 50)}, 'structure_module': {'final_atom_mask': (20, 37), 'final_atom_positions': (20, 37, 3)}, 'plddt': (20,), 'aligned_confidence_probs': (20, 20, 64), 'max_predicted_aligned_error': (), 'ptm': (), 'ranking_confidence': ()}
+I0421 22:38:53.381668 140572398896960 run_alphafold.py:204] Total JAX model model_2_ptm_pred_0 on input predict time (includes compilation time, see --benchmark): 384.2s
+I0421 22:38:53.813020 140572398896960 amber_minimize.py:177] alterations info: {'nonstandard_residues': [], 'removed_heterogens': set(), 'missing_residues': {}, 'missing_heavy_atoms': {}, 'missing_terminals': {<Residue 19 (SER) of chain 0>: ['OXT']}, 'Se_in_MET': [], 'removed_chains': {0: []}}
+I0421 22:38:53.844369 140572398896960 amber_minimize.py:408] Minimizing protein, attempt 1 of 100.
+I0421 22:38:53.963860 140572398896960 amber_minimize.py:69] Restraining 154 / 304 particles.
+I0421 22:38:55.629503 140572398896960 amber_minimize.py:177] alterations info: {'nonstandard_residues': [], 'removed_heterogens': set(), 'missing_residues': {}, 'missing_heavy_atoms': {}, 'missing_terminals': {}, 'Se_in_MET': [], 'removed_chains': {0: []}}
+I0421 22:38:55.733362 140572398896960 amber_minimize.py:500] Iteration completed: Einit 654.82 Efinal -291.91 Time 1.56 s num residue violations 0 num residue exclusions 0 
+I0421 22:38:56.961099 140572398896960 amber_minimize.py:177] alterations info: {'nonstandard_residues': [], 'removed_heterogens': set(), 'missing_residues': {}, 'missing_heavy_atoms': {}, 'missing_terminals': {<Residue 19 (SER) of chain 0>: ['OXT']}, 'Se_in_MET': [], 'removed_chains': {0: []}}
+I0421 22:38:57.024088 140572398896960 run_alphafold.py:190] Running model model_3_ptm_pred_0 on input
+I0421 22:38:58.377078 140572398896960 model.py:166] Running predict with shape(feat) = {'aatype': (4, 20), 'residue_index': (4, 20), 'seq_length': (4,), 'is_distillation': (4,), 'seq_mask': (4, 20), 'msa_mask': (4, 512, 20), 'msa_row_mask': (4, 512), 'random_crop_to_size_seed': (4, 2), 'atom14_atom_exists': (4, 20, 14), 'residx_atom14_to_atom37': (4, 20, 14), 'residx_atom37_to_atom14': (4, 20, 37), 'atom37_atom_exists': (4, 20, 37), 'extra_msa': (4, 5120, 20), 'extra_msa_mask': (4, 5120, 20), 'extra_msa_row_mask': (4, 5120), 'bert_mask': (4, 512, 20), 'true_msa': (4, 512, 20), 'extra_has_deletion': (4, 5120, 20), 'extra_deletion_value': (4, 5120, 20), 'msa_feat': (4, 512, 20, 49), 'target_feat': (4, 20, 22)}
+2022-04-21 22:41:52.748118: E external/org_tensorflow/tensorflow/compiler/xla/service/slow_operation_alarm.cc:61] 
+********************************
+Very slow compile?  If you want to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+Compiling module jit_apply_fn__2.99190
+********************************
+I0421 22:44:08.882815 140572398896960 model.py:176] Output shape was {'distogram': {'bin_edges': (63,), 'logits': (20, 20, 64)}, 'experimentally_resolved': {'logits': (20, 37)}, 'masked_msa': {'logits': (512, 20, 23)}, 'predicted_aligned_error': (20, 20), 'predicted_lddt': {'logits': (20, 50)}, 'structure_module': {'final_atom_mask': (20, 37), 'final_atom_positions': (20, 37, 3)}, 'plddt': (20,), 'aligned_confidence_probs': (20, 20, 64), 'max_predicted_aligned_error': (), 'ptm': (), 'ranking_confidence': ()}
+I0421 22:44:08.883326 140572398896960 run_alphafold.py:204] Total JAX model model_3_ptm_pred_0 on input predict time (includes compilation time, see --benchmark): 310.5s
+I0421 22:44:09.323282 140572398896960 amber_minimize.py:177] alterations info: {'nonstandard_residues': [], 'removed_heterogens': set(), 'missing_residues': {}, 'missing_heavy_atoms': {}, 'missing_terminals': {<Residue 19 (SER) of chain 0>: ['OXT']}, 'Se_in_MET': [], 'removed_chains': {0: []}}
+I0421 22:44:09.354399 140572398896960 amber_minimize.py:408] Minimizing protein, attempt 1 of 100.
+I0421 22:44:09.477561 140572398896960 amber_minimize.py:69] Restraining 154 / 304 particles.
+I0421 22:44:10.273924 140572398896960 amber_minimize.py:177] alterations info: {'nonstandard_residues': [], 'removed_heterogens': set(), 'missing_residues': {}, 'missing_heavy_atoms': {}, 'missing_terminals': {}, 'Se_in_MET': [], 'removed_chains': {0: []}}
+I0421 22:44:10.376341 140572398896960 amber_minimize.py:500] Iteration completed: Einit 637.58 Efinal -282.55 Time 0.71 s num residue violations 0 num residue exclusions 0 
+I0421 22:44:10.701657 140572398896960 amber_minimize.py:177] alterations info: {'nonstandard_residues': [], 'removed_heterogens': set(), 'missing_residues': {}, 'missing_heavy_atoms': {}, 'missing_terminals': {<Residue 19 (SER) of chain 0>: ['OXT']}, 'Se_in_MET': [], 'removed_chains': {0: []}}
+I0421 22:44:10.764847 140572398896960 run_alphafold.py:190] Running model model_4_ptm_pred_0 on input
+I0421 22:44:12.194489 140572398896960 model.py:166] Running predict with shape(feat) = {'aatype': (4, 20), 'residue_index': (4, 20), 'seq_length': (4,), 'is_distillation': (4,), 'seq_mask': (4, 20), 'msa_mask': (4, 512, 20), 'msa_row_mask': (4, 512), 'random_crop_to_size_seed': (4, 2), 'atom14_atom_exists': (4, 20, 14), 'residx_atom14_to_atom37': (4, 20, 14), 'residx_atom37_to_atom14': (4, 20, 37), 'atom37_atom_exists': (4, 20, 37), 'extra_msa': (4, 5120, 20), 'extra_msa_mask': (4, 5120, 20), 'extra_msa_row_mask': (4, 5120), 'bert_mask': (4, 512, 20), 'true_msa': (4, 512, 20), 'extra_has_deletion': (4, 5120, 20), 'extra_deletion_value': (4, 5120, 20), 'msa_feat': (4, 512, 20, 49), 'target_feat': (4, 20, 22)}
+I0421 22:49:26.209575 140572398896960 model.py:176] Output shape was {'distogram': {'bin_edges': (63,), 'logits': (20, 20, 64)}, 'experimentally_resolved': {'logits': (20, 37)}, 'masked_msa': {'logits': (512, 20, 23)}, 'predicted_aligned_error': (20, 20), 'predicted_lddt': {'logits': (20, 50)}, 'structure_module': {'final_atom_mask': (20, 37), 'final_atom_positions': (20, 37, 3)}, 'plddt': (20,), 'aligned_confidence_probs': (20, 20, 64), 'max_predicted_aligned_error': (), 'ptm': (), 'ranking_confidence': ()}
+I0421 22:49:26.210129 140572398896960 run_alphafold.py:204] Total JAX model model_4_ptm_pred_0 on input predict time (includes compilation time, see --benchmark): 314.0s
+I0421 22:49:26.647497 140572398896960 amber_minimize.py:177] alterations info: {'nonstandard_residues': [], 'removed_heterogens': set(), 'missing_residues': {}, 'missing_heavy_atoms': {}, 'missing_terminals': {<Residue 19 (SER) of chain 0>: ['OXT']}, 'Se_in_MET': [], 'removed_chains': {0: []}}
+I0421 22:49:26.678878 140572398896960 amber_minimize.py:408] Minimizing protein, attempt 1 of 100.
+I0421 22:49:26.797878 140572398896960 amber_minimize.py:69] Restraining 154 / 304 particles.
+I0421 22:49:27.618741 140572398896960 amber_minimize.py:177] alterations info: {'nonstandard_residues': [], 'removed_heterogens': set(), 'missing_residues': {}, 'missing_heavy_atoms': {}, 'missing_terminals': {}, 'Se_in_MET': [], 'removed_chains': {0: []}}
+I0421 22:49:27.719142 140572398896960 amber_minimize.py:500] Iteration completed: Einit 1077.63 Efinal -285.22 Time 0.73 s num residue violations 0 num residue exclusions 0 
+I0421 22:49:28.036938 140572398896960 amber_minimize.py:177] alterations info: {'nonstandard_residues': [], 'removed_heterogens': set(), 'missing_residues': {}, 'missing_heavy_atoms': {}, 'missing_terminals': {<Residue 19 (SER) of chain 0>: ['OXT']}, 'Se_in_MET': [], 'removed_chains': {0: []}}
+I0421 22:49:28.099872 140572398896960 run_alphafold.py:190] Running model model_5_ptm_pred_0 on input
+I0421 22:49:29.510659 140572398896960 model.py:166] Running predict with shape(feat) = {'aatype': (4, 20), 'residue_index': (4, 20), 'seq_length': (4,), 'is_distillation': (4,), 'seq_mask': (4, 20), 'msa_mask': (4, 512, 20), 'msa_row_mask': (4, 512), 'random_crop_to_size_seed': (4, 2), 'atom14_atom_exists': (4, 20, 14), 'residx_atom14_to_atom37': (4, 20, 14), 'residx_atom37_to_atom14': (4, 20, 37), 'atom37_atom_exists': (4, 20, 37), 'extra_msa': (4, 1024, 20), 'extra_msa_mask': (4, 1024, 20), 'extra_msa_row_mask': (4, 1024), 'bert_mask': (4, 512, 20), 'true_msa': (4, 512, 20), 'extra_has_deletion': (4, 1024, 20), 'extra_deletion_value': (4, 1024, 20), 'msa_feat': (4, 512, 20, 49), 'target_feat': (4, 20, 22)}
+2022-04-21 22:52:22.887120: E external/org_tensorflow/tensorflow/compiler/xla/service/slow_operation_alarm.cc:61] 
+********************************
+Very slow compile?  If you want to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+Compiling module jit_apply_fn__4.99190
+********************************
+I0421 22:54:26.080539 140572398896960 model.py:176] Output shape was {'distogram': {'bin_edges': (63,), 'logits': (20, 20, 64)}, 'experimentally_resolved': {'logits': (20, 37)}, 'masked_msa': {'logits': (512, 20, 23)}, 'predicted_aligned_error': (20, 20), 'predicted_lddt': {'logits': (20, 50)}, 'structure_module': {'final_atom_mask': (20, 37), 'final_atom_positions': (20, 37, 3)}, 'plddt': (20,), 'aligned_confidence_probs': (20, 20, 64), 'max_predicted_aligned_error': (), 'ptm': (), 'ranking_confidence': ()}
+I0421 22:54:26.081087 140572398896960 run_alphafold.py:204] Total JAX model model_5_ptm_pred_0 on input predict time (includes compilation time, see --benchmark): 296.6s
+I0421 22:54:26.596988 140572398896960 amber_minimize.py:177] alterations info: {'nonstandard_residues': [], 'removed_heterogens': set(), 'missing_residues': {}, 'missing_heavy_atoms': {}, 'missing_terminals': {<Residue 19 (SER) of chain 0>: ['OXT']}, 'Se_in_MET': [], 'removed_chains': {0: []}}
+I0421 22:54:26.628037 140572398896960 amber_minimize.py:408] Minimizing protein, attempt 1 of 100.
+I0421 22:54:26.746833 140572398896960 amber_minimize.py:69] Restraining 154 / 304 particles.
+I0421 22:54:27.635689 140572398896960 amber_minimize.py:177] alterations info: {'nonstandard_residues': [], 'removed_heterogens': set(), 'missing_residues': {}, 'missing_heavy_atoms': {}, 'missing_terminals': {}, 'Se_in_MET': [], 'removed_chains': {0: []}}
+I0421 22:54:27.736925 140572398896960 amber_minimize.py:500] Iteration completed: Einit 563.54 Efinal -302.96 Time 0.80 s num residue violations 0 num residue exclusions 0 
+I0421 22:54:28.059730 140572398896960 amber_minimize.py:177] alterations info: {'nonstandard_residues': [], 'removed_heterogens': set(), 'missing_residues': {}, 'missing_heavy_atoms': {}, 'missing_terminals': {<Residue 19 (SER) of chain 0>: ['OXT']}, 'Se_in_MET': [], 'removed_chains': {0: []}}
+I0421 22:54:28.126213 140572398896960 run_alphafold.py:271] Final timings for input: {'features': 1346.3676331043243, 'process_features_model_1_ptm_pred_0': 4.317607641220093, 'predict_and_compile_model_1_ptm_pred_0': 454.2218587398529, 'relax_model_1_ptm_pred_0': 3.7690885066986084, 'process_features_model_2_ptm_pred_0': 1.6358602046966553, 'predict_and_compile_model_2_ptm_pred_0': 384.20421051979065, 'relax_model_2_ptm_pred_0': 3.5740315914154053, 'process_features_model_3_ptm_pred_0': 1.3527328968048096, 'predict_and_compile_model_3_ptm_pred_0': 310.5063729286194, 'relax_model_3_ptm_pred_0': 1.8124468326568604, 'process_features_model_4_ptm_pred_0': 1.4288361072540283, 'predict_and_compile_model_4_ptm_pred_0': 314.01578187942505, 'relax_model_4_ptm_pred_0': 1.8211877346038818, 'process_features_model_5_ptm_pred_0': 1.4102122783660889, 'predict_and_compile_model_5_ptm_pred_0': 296.5708701610565, 'relax_model_5_ptm_pred_0': 1.9726049900054932}
