@@ -3,9 +3,11 @@ Tutorial to run AlphaFold2 - Monomers and Multimers
 
 ### Initial Setups
 
-### Compute Accounts
+### Compute Resources
 *   Register for the Robetta server account https://robetta.bakerlab.org/register.php (takes about a minute)
 *   For colab (https://research.google.com/colaboratory/), you need an active gmail account https://support.google.com/mail/answer/56256?hl=en (takes about a minute)
+*   Alternative Colab https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb
+
 *   Rutger's participants with an active Rutger's netid can apply for the Amarel cluster account: https://oarc.rutgers.edu/amarel-cluster-access-request/
 
 ### SSH clients
