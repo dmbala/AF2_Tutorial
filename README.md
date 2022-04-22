@@ -63,3 +63,8 @@ Now check your jobs:
 > squeue -u <netid> 
 ```
 Note that if you are not running this on the Amarel clsuter, please modify the db and bin path in the wrapper scripts, and  change the patition names and other parameters specific to your local cluster. 
+
+## Molview
+Web mol views: https://www.ncbi.nlm.nih.gov/Structure/icn3d/full.html
+Check for a list of molecular viewing packages: https://www.rcsb.org/docs/additional-resources/molecular-graphics-software
+
