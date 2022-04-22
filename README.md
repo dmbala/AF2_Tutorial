@@ -70,4 +70,15 @@ Note that if you are not running this on the Amarel clsuter, please modify the d
 Web mol views: https://www.ncbi.nlm.nih.gov/Structure/icn3d/full.html
 
 Check for a list of molecular viewing packages: https://www.rcsb.org/docs/additional-resources/molecular-graphics-software
+## AlphaFoldDB Examples
+https://alphafold.ebi.ac.uk/entry/Q93074
+https://alphafold.ebi.ac.uk/entry/Q5VSL9
+https://alphafold.ebi.ac.uk/entry/P54725
 
+## Analysis
+Copy the analysis scripts
+
+```
+chmod +x extract_ca_bfactor.sh
+./extract_ca_bfactor.sh
+```
