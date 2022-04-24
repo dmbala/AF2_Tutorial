@@ -16,7 +16,7 @@
 
 echo "--------------------------------" 
 date 
-chmod +x run_local_sing_cpu.sh
+chmod +x run_local_sing_gpu.sh
 ./run_local_sing_gpu.sh "${PWD}/input.fa"  "${PWD}/Output"
 echo "--------------------------------" 
 
